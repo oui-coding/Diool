@@ -53,11 +53,12 @@
     padding: 0;
     height: 4vw;
     font-size: 1.33vw !important;
+    -webkit-appearance: none;
 }
 
 .aboutIntro-secondTitle{
   color:#E56B36 !important;
-  margin-bottom:2vw !important;
+  /* margin-bottom:2vw !important; */
   font-size:3.33vw !important;
 }
 /*=========== select style =========*/
@@ -103,6 +104,7 @@
   text-align-last: left;
   padding-left: 1%;
   font-size: 1.4vw;
+  
 }
 .select_activity_sector option{
   font-family: 'Montserrat';
@@ -251,9 +253,6 @@ color: #000000;
  
 }
 
-.payment_collection table th label span {
-	/* font-weight:bolder; */
-}
 
 .payment_collection td.last_td label.padding_td {
 	padding-top: 15px;
@@ -450,12 +449,15 @@ height: 56.380vw !important;
     text-align: center !important;
     text-align-last: center !important;
     padding-left: 0 !important;
-    width: 62vw;
+    /* width: 62vw; */
+    width : 64vw;
     margin-left: 7vw;
     font-size: 4vw;
     /* margin-top: 3vw; */
     margin-bottom: 3vw;
     padding-left: 33px;
+    -webkit-appearance: none;
+    /* text-indent: 22vw; */
     
   }
   .select_activity_sector option {

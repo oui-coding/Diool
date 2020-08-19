@@ -132,7 +132,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-  font-weight: bold;
+		font-weight: bold;
+		-webkit-appearance: none;
 	}
 
 	.messenger-icon{
@@ -216,7 +217,7 @@
 	margin-bottom: 2% !important;
 }
 .switch-lang-Select{
-   height: 4vw;
+   height: 5vw;
     width: 27% ;
 	font-size: 3vw !important;
 }

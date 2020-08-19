@@ -7,6 +7,7 @@
   font-family: 'MontserratAlternates-bold';
   font-weight: bold;
   text-align: center;
+  width : max-content
   /* width: 86%; */
 }
 
@@ -81,8 +82,9 @@ p.clt_0 {
 
   .aboutIntro h1 {
     font-size: 9.375vw !important;
-    margin-bottom: 7.813vw !important;
-    margin-top: 18.438vw !important;
+    /* margin-bottom: 7.813vw !important;
+    margin-top: 18.438vw !important; */
+    width : unset
   }
 
 }
