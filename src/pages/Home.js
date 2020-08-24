@@ -211,21 +211,28 @@ const Home = (props) => {
 
     useEffect(() => {
 
-      const safari = window.navigator.userAgent.indexOf('Safari') != -1
-     
+      var ua = navigator.userAgent.toLowerCase(); 
+      if (ua.indexOf('safari') != -1) { 
+let selectOption = document.getElementById("selectOption");
+let shop = document.getElementById("what_shop")
 
-      if(!safari){
-        console.log("true")
-        if(document.getElementById("selectOption") !== undefined){
-          if(window.innerWidth <= 767){
-            document.getElementById("selectOption").style.textIndent  = "22vw";
-            document.getElementById("selectOption").style.fontSize = "3.7vw"
-          }
+          if(selectOption !== undefined){
 
-          
-
+            if(window.innerWidth <=767){
+         
+              selectOption.style.textIndent  = "22vw";
+              selectOption.style.fontSize = "3.7vw";
+              shop.style.textIndent ="22vw";
+              shop.style.fontSize = "3.7vw";
+            
+              
+            }
         }
+          
+        
       }
+
+      
       
         
       setValue("0");
@@ -246,6 +253,19 @@ const Home = (props) => {
   }
 
     const handlechangeShop = (e) => {
+
+      let shop = document.getElementById("what_shop")
+
+      if(shop.options[shop.selectedIndex].value === "0"){
+
+        shop.style.textIndent ="22vw";
+        shop.style.fontSize = "3.7vw";
+    }
+    else{
+      shop.style.textIndent ="3vw";
+        shop.style.fontSize = "3.7vw";
+    }
+
     setValue(e.target.value);
 
     const capt = capitalsValues.filter((elm) => elm.value === e.target.value);
@@ -296,7 +316,7 @@ const Home = (props) => {
                 }
               > <div>
                 <h2>{t('Home.question_1')}</h2>
-                <div className="select_activity_sector" id="selectOption">
+                <div className="select_activity_sector" >
                   <label className="labelselectstyle">
                     <select
                       id="what_shop"
@@ -316,13 +336,13 @@ const Home = (props) => {
                 </div>
                 <div>
                 <h2>{t('Home.question_2')}</h2>
-                <div className="select_activity_sector" style={{display:'flex'}}>
+                <div className="select_activity_sector"  style={{display:'flex'}}>
                   <p className='xaf-select'>XAF</p>
                 {/* <span>XAF </span> */}
                   <label className="labelselectstyle labelselectstyle-second">
                     
-                    <select
-                      id="mach_capital"
+                    <select id="selectOption"
+                      //id="mach_capital"
                       className="second-select"
                       defaultValue="150000"
                       onChange={handlechangeCapital}
